@@ -1,0 +1,8 @@
+<div *ngFor="let item of pokeData.slice(0, itens)">
+  <!-- Renderize seus cards aqui com base em 'item' -->
+  <div class="card">
+    <h3>{{ item.title }}</h3>
+  </div>
+</div>
+
+<button *ngIf="itens < pokeData.length" (click)="loadMore()">Load More</button>

@@ -1,1 +1,11 @@
+<div class="container__home">
+  <div class="home-cards">
+    <app-poke-box *ngFor="let pokemon of jsonData.slice(0, itemsToShow)" [pokemon]="pokemon"></app-poke-box>
+  </div>
 
+  <div class="loadMore">
+    <button *ngIf="itemsToShow < jsonData.length" (click)="loadMore()">Carregar Mais</button>
+  </div>
+
+
+</div>
